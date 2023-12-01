@@ -14,8 +14,8 @@ import re
 #nltk.download('punkt')
 
 #openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key="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"
-client = OpenAI(api_key="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")
+openai.api_key="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"
+client = OpenAI(api_key="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")
 # chat=ChatOpenAI(openai_api_key="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")
 # messages = [
 #     SystemMessage(content="n."),
@@ -61,7 +61,7 @@ def concat_data():
   casual_file = open('tweets_cleaned.csv', mode='r', encoding='utf-8')
   formal_reader = csv.reader(formal_file)
   casual_reader = csv.reader(casual_file)
-  for i in range(100):
+  for i in range(1000):
     try:
       # Now, next_line contains the values of the next line in the CSV file
       data.append((next(formal_reader),1))
@@ -69,23 +69,26 @@ def concat_data():
     except StopIteration:
     # Handle the case when there are no more lines in the CSV file
       pass
-  #print(data[0:10])
+
   if os.path.isfile("trueVSpredict_labels.npy"):
     trueVSpredict_labels = np.load("trueVSpredict_labels.npy").tolist()
   else:
     trueVSpredict_labels=[]
-  for i in range(TEST):
-    test_sentence=data[3+i]
+  print(len(trueVSpredict_labels))
+  for i in range(min(TEST,len(data)-len(trueVSpredict_labels)-4)):
+    test_sentence=data[min(3+i+len(trueVSpredict_labels),len(data)-1)]
     prompt=f"Help me classify some texts? Here are some examples: ({data[0]}, {data[1]}, {data[2]}). Now I have a new unlabeled sentence {test_sentence}. What do you think the label is? You can take a guess, but you need to give me an result! Label your answer as \"reasoning: \" and \"prediction: {{number}}\" "
     response = callLLM(prompt)
     response=response.choices[0].message.content
-    # Use re.search() to check if the pattern is in the sentence
+     # Use re.search() to check if the pattern is in the sentence
     match = re.search(r'prediction:\s*(\d+)', response)
     if match:
       prediction=int(match.group(1))
       trueVSpredict_labels.append([test_sentence[1],prediction])
     else:
       trueVSpredict_labels.append([test_sentence[1],-1])
+
+      
     # print(f"prompt: {prompt}")
     # print(f"response: {response}")
     # print(f"trueVSpredict_labels: {trueVSpredict_labels}")
@@ -101,19 +104,17 @@ def makefig(trueVSpredict_labels):
 # Example array of pairs (assumed format)
   # Count correct and wrong predictions
   correct_predictions = sum(1 for a, b in trueVSpredict_labels if a == b)
-  wrong_predictions = len(trueVSpredict_labels) - correct_predictions
+  no_predictions = sum(1 for a, b in trueVSpredict_labels if b == -1)
+  wrong_predictions = len(trueVSpredict_labels) - correct_predictions - no_predictions
 
   # Data for histogram
-  categories = ['Correct Predictions', 'Wrong Predictions']
-  values = [correct_predictions, wrong_predictions]
-  plt.bar(categories, values, color=['green', 'grey'])
+  categories = ['Correct Predictions', 'Wrong Predictions', 'No Predictions']
+  values = [correct_predictions, wrong_predictions, no_predictions]
+  plt.bar(categories, values, color=['green', 'red','grey'])
   plt.xlabel('Type of Prediction')
   plt.ylabel('Number of Sentences')
-  plt.title('Accuracy of Prediction Given 3-Shot Prompting')
+  plt.title("Accuracy of Prediction Given 3-Shot Prompting is {:0.2f}".format(correct_predictions/len(trueVSpredict_labels)))
   plt.savefig("accuracy")
-
-
-
 
 
 
@@ -151,7 +152,7 @@ if __name__ == "__main__":
     #dataprocess()
     #extract_sentences("belief.txt")
     #others()
-    TEST=5
+    TEST=50
 
 
     trueVSpredict_labels=concat_data()

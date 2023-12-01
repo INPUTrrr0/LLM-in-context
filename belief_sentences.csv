@@ -1,0 +1,40 @@
+It is common to think of believing as involving entities—beliefs—that are in some sense contained in the mind.
+"When someone learns a particular fact, for example, when Kai reads that garden snails are hermaphrodites, they acquire a new belief (in this case, the belief that garden snails are hermaphrodites)."
+"The fact in question—or more accurately, a representation, symbol, or marker of that fact—may be stored in memory and accessed or recalled when necessary."
+"In one way of speaking, the belief just is the fact or proposition represented, or the particular stored token of that fact or proposition; in another way of speaking, the belief is the state of having such a fact or representation stored."
+It is also common to suppose that beliefs play a causal role in the production of behavior.
+"Continuing the example, we might imagine that after learning about garden snail mating, Kai naturally turns their attention elsewhere, not consciously considering the matter for several days, until they and their ten-year-old daughter start watching an internet video about molluscs."
+"Involuntarily, Kai’s new knowledge about the hermaphroditism of garden snails is called up from memory."
+"Kai says to her, “Did you know that garden snails have both male and female organs at the same time?” It seems plausible to say that Kai’s belief about garden snails, or their possession of that belief, caused, or figured in a causal explanation of, their utterance."
+"Various elements of this intuitive characterization of belief have been challenged by philosophers, but it is probably fair to say that the majority of contemporary philosophers of mind accept the bulk of this picture, which embodies the core ideas of the representational approach to belief, according to which central cases of belief involve someone’s having in their head or mind a representation with the same propositional content as the belief."
+"(But see §2.2, below, for some caveats, and see the entry on mental representation.)"
+"As discussed below, representationalists may diverge in their accounts of the nature of representation, and they need not agree about what further conditions, besides possessing such a representation, are necessary if a being is to qualify as having a belief."
+"Among the more prominent advocates of a representational approach to belief are Fodor (1975, 1981, 1987, 1990), Millikan (1984, 1993), Dretske (1988), Burge (2010), Mandelbaum (2016; Quilty-Dunn and Mandelbaum 2018), and Zimmerman (2018)."
+"One strand of representationalism, endorsed by Fodor, takes mental representations to be sentences in an internal language of thought."
+"To get a sense of what this view amounts to, it is helpful to start with an analogy."
+Computers are sometimes characterized as operating by manipulating sentences in “machine language” in accordance with certain rules.
+Consider a simplified description of what happens as one enters numbers into a spreadsheet.
+"Inputs from the keyboard cause the computer, depending on the programs it is running and its internal state, to instantiate or “token” a sentence (in machine language) with the content (translated into English) of, for example, “numerical value 4 in cell A1”."
+"In accordance with certain rules, the machine then displays the shape “4” in a certain location on the monitor, and perhaps, if it is implementing the rule “the values of column B are to be twice the values of column A”, it tokens the sentence “numerical value 8 in cell B1” and displays the shape “8” in another location on the monitor."
+"If we someday construct a robot whose behavior resembles that of a human being, we might imagine it to operate along broadly the lines described above—that is, by manipulating machine-language sentences in accordance with rules, in connection with various potential inputs and outputs."
+Such a robot might somewhere store the machine-language sentence whose English translation is “the chemical formula for water is H2O”.
+"We might suppose this robot is able to act as does a human who possesses this belief because it is disposed to access this sentence appropriately on relevant occasions: When asked “of what chemical elements is water compounded?”, the robot accesses the water sentence and manipulates it and other relevant sentences in such a way that it produces an appropriate response."
+"According to the language of thought hypothesis (see the entry on the language of thought hypothesis), our cognition proceeds rather like such a robot’s."
+"The formulae we manipulate are not in “machine language”, of course, but rather in a species-wide “language of thought”."
+"A sentence in the language of thought with some particular propositional content P is a “representation” of P. On this view, a subject believes that P just in case they have a representation of P that plays the right kind of role—a “belief-like” role—in their cognition."
+"That is, the representation must not merely be instantiated somewhere in the mind or brain, but it must be deployed, or apt to be deployed, in ways we regard as characteristic of belief."
+"For example, it must be apt to be called up for use in theoretical inferences toward which it is relevant."
+It must be ready for appropriate deployment in deliberation about means to desired ends.
+"It is sometimes said, in such a case, that the subject has the proposition P, or a representation of that proposition, tokened in their “belief box” (though of course it is not assumed that there is any literal box-like structure in the head)."
+"Dretske’s view centers on the idea of representational systems as systems with the function of tracking features of the world (for similar views, see Millikan 1984, 2017; Neander 2017)."
+"Organisms, especially mobile ones, generally need to keep track of features of their environment to be evolutionarily successful."
+"Consequently, they generally possess internal systems whose function it is to covary in certain ways with the environment."
+"For example, certain marine bacteria contain internal magnets that align with the Earth’s magnetic field."
+"In the northern hemisphere, these bacteria, guided by the magnets, propel themselves toward magnetic north."
+"Since in the northern hemisphere magnetic north tends downward, they are thus carried toward deeper water and sediment, and away from toxic, oxygen-rich surface water."
+We might thus say that the magnetic system of these bacteria is a representational system that functions to indicate the direction of benign or oxygen-poor environments.
+"In general, on Dretske’s view, an organism can be said to represent P just in case that organism contains a subsystem whose function it is to enter state A only if P holds, and that subsystem is in state A."
+"To have beliefs, Dretske suggests, is to have an integrated manifold of such representational systems, acquired in part through associative learning, poised to guide behavior."
+"Given the lack of such a complex, and the lack of associative learning, magnetosome bacteria cannot, on Dretske’s view, rightly be regarded as literally possessing full-fledged beliefs."
+"But exactly how rich an organism’s representational structure must be for it to have beliefs, and in what ways, Dretske regards as a terminological boundary dispute, rather than a matter of deep ontological significance."
+(For more on belief in non-human animals see §4 below.)
